@@ -7,11 +7,9 @@ import api from '../assets/api.json';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements AfterViewInit {
+export class AppComponent {
   name = 'Angular ' + VERSION.major;
 
   constructor() {}
   spec = api;
-
-  
 }
