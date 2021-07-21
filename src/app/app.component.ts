@@ -1,5 +1,6 @@
 import { AfterViewInit, Component, VERSION } from '@angular/core';
 import SwaggerUI from 'swagger-ui';
+import * as api from '../assets/api.json';
 
 @Component({
   selector: 'my-app',
@@ -10,11 +11,13 @@ export class AppComponent implements AfterViewInit {
   name = 'Angular ' + VERSION.major;
 
   constructor() {}
+  spec = api;
 
   ngAfterViewInit() {
     const ui = SwaggerUI({
       domNode: document.getElementById('swagger-ui'),
-      url: 'https://petstore.swagger.io/v2/swagger.json'
+      spec: this.spec
+      // url: 'https://petstore.swagger.io/v2/swagger.json'
     });
   }
 }
