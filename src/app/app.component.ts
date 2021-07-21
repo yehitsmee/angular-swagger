@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, VERSION } from '@angular/core';
 import SwaggerUI from 'swagger-ui';
-import * as api from '../assets/api.json';
+import api from '../assets/api.json';
 
 @Component({
   selector: 'my-app',
