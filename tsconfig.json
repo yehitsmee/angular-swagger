@@ -23,6 +23,7 @@
     "enableIvy": true,
     "fullTemplateTypeCheck": true,
     "strictInjectionParameters": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "esModuleInterop": true
   }
 }
