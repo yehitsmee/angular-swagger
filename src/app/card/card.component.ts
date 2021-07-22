@@ -7,7 +7,7 @@ import { ApiService } from '../api.service';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent implements OnInit {
-  private spec: any;
+  spec: any;
   // private tag: any;
 
   constructor(private apiService: ApiService) {}

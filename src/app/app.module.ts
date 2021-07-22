@@ -9,6 +9,7 @@ import { HelloComponent } from './hello.component';
 import { ApiComponent } from './api/api.component';
 import { CardComponent } from './card/card.component';
 import { RoutingModule } from './routing.module';
+import { ApiService } from './api.service';
 
 @NgModule({
   imports: [
@@ -19,6 +20,7 @@ import { RoutingModule } from './routing.module';
     RoutingModule
   ],
   declarations: [AppComponent, HelloComponent, ApiComponent, CardComponent],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
