@@ -1,7 +1,5 @@
 import { Component, VERSION } from '@angular/core';
 
-import api from '../assets/api.json';
-
 @Component({
   selector: 'my-app',
   templateUrl: './app.component.html',
@@ -11,5 +9,4 @@ export class AppComponent {
   name = 'Angular ' + VERSION.major;
 
   constructor() {}
-  spec = api;
 }

@@ -12,7 +12,7 @@ export class ApiComponent implements AfterViewInit, OnInit {
   constructor(private apiService: ApiService) {}
 
   ngOnInit() {
-    this.spec = this.apiService.getApi;
+    this.spec = this.apiService.getApi();
   }
   ngAfterViewInit() {
     const ui = SwaggerUI({
