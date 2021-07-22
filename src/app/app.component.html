@@ -1,7 +1,18 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<mat-toolbar color="primary">
+  <button mat-icon-button class="example-icon" (click)="drawer.open()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span class="example-spacer"></span>
+  <span>PETSTORE API DOC</span>
+</mat-toolbar>
+<mat-drawer-container class="sidenav">
+  <mat-drawer #drawer>
+    <div fxLayout="column">
+      <button mat-button>Home</button>
+    </div>
+  </mat-drawer>
+</mat-drawer-container>
+
 <router-outlet></router-outlet>
 <!-- {{spec.paths["/pet"].post.operationId}}
 <app-card *ngFor="let tag of spec.tags" [tag]="tag"></app-card>
