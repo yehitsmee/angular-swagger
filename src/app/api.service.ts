@@ -6,10 +6,16 @@ import pet from '../assets/pet.json';
 export class ApiService {
   // spec = api;
   constructor() {}
+  getSwaggerUI() {
+    return api;
+  }
   getApi(type: string) {
     if (type === 'pet') {
+      console.log('Hi');
+      console.log(pet);
       return pet;
     } else {
+      console.log('No');
       return api;
     }
   }

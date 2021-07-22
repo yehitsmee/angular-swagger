@@ -13,6 +13,6 @@ export class CardComponent implements OnInit {
   constructor(private apiService: ApiService) {}
 
   ngOnInit() {
-    this.spec = this.apiService.getApi();
+    this.spec = this.apiService.getSwaggerUI();
   }
 }
