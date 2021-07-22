@@ -1,12 +1,10 @@
-<div *ngFor="let tag of spec.tags">
-  <div class="container">
-    <a routerLink="/api" [queryParams]="{type:tag.name}">
-      <mat-card class="card">
-        <mat-card-header>{{tag.name | uppercase}}</mat-card-header>
-        <mat-card-content>{{tag.description}}</mat-card-content>
-        <mat-card-footer *ngIf="tag.externalDocs">{{tag.externalDocs.description}} {{tag.externalDocs.url}}
-        </mat-card-footer>
-      </mat-card>
-    </a>
+<div class="container">
+  <div class="flex-container" fxLayout="column">
+    <div *ngFor="let tag of spec.tags">
+      <a routerLink="/api" [queryParams]="{type:tag.name}">
+        <mat-card class="card" style="text-align:center">{{tag.name | uppercase}}
+        </mat-card>
+      </a>
+    </div>
   </div>
 </div>
