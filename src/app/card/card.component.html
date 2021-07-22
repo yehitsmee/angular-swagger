@@ -1,7 +1,10 @@
-<!-- <mat-card class="card">
-  <mat-card-header>{{tag.name}}</mat-card-header>
-  <mat-card-content>{{tag.description}}</mat-card-content>
-  <mat-card-footer *ngIf="tag.externalDocs">{{tag.externalDocs.description}} {{tag.externalDocs.url}}
-  </mat-card-footer>
-</mat-card> -->
-<mat-card>Simple Card</mat-card>
+<div class="container">
+  <a href="https://google.com">
+    <mat-card class="card">
+      <mat-card-header>{{tag.name | uppercase}}</mat-card-header>
+      <mat-card-content>{{tag.description}}</mat-card-content>
+      <mat-card-footer *ngIf="tag.externalDocs">{{tag.externalDocs.description}} {{tag.externalDocs.url}}
+      </mat-card-footer>
+    </mat-card>
+  </a>
+</div>

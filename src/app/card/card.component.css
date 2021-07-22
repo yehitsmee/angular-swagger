@@ -1,0 +1,9 @@
+.card {
+  margin: 20px;
+  padding-left: 40px;
+  border: 2px solid grey;
+  background-color: lightgrey;
+}
+.container {
+  display: inline;
+}
