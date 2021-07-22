@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import SwaggerUI from 'swagger-ui';
 import { ApiService } from '../api.service';
 
@@ -8,11 +9,15 @@ import { ApiService } from '../api.service';
   styleUrls: ['./api.component.css']
 })
 export class ApiComponent implements AfterViewInit, OnInit {
+  type: string;
   spec: any;
-  constructor(private apiService: ApiService) {}
+  constructor(private apiService: ApiService, private route: ActivatedRoute) {}
 
   ngOnInit() {
-    this.spec = this.apiService.getApi();
+    this.route.queryParams.subscribe(params => {
+      this.type = params.type;
+    });
+    this.spec = this.apiService.getApi(this.type);
   }
   ngAfterViewInit() {
     const ui = SwaggerUI({
