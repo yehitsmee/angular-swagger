@@ -1,6 +1,6 @@
 <div *ngFor="let tag of spec.tags">
   <div class="container">
-    <a routerLink="/api" [queryParams]="{type:'pet'}">
+    <a routerLink="/api" [queryParams]="{type:tag.name}">
       <mat-card class="card">
         <mat-card-header>{{tag.name | uppercase}}</mat-card-header>
         <mat-card-content>{{tag.description}}</mat-card-content>
